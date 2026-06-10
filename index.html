@@ -1,31 +1,206 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NamTech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NamTech Solutions</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:white;
+    color:#2563eb;
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    max-width:600px;
+    padding:15px;
+    margin:10px auto;
+    display:block;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.contact button{
+    padding:15px 40px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+</style>
 </head>
+
 <body>
 
-<nav>
+<header>
     <div class="logo">NamTech</div>
 
-    <ul>
-        <li><a href="#home">Trang chủ</a></li>
-        <li><a href="#services">Dịch vụ</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
-    </ul>
-</nav>
+    <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#services">Dịch vụ</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+</header>
 
-<section class="hero" id="home">
-    <h1>Xây dựng tương lai bằng công nghệ</h1>
-    <p>Thiết kế website chuyên nghiệp cho doanh nghiệp.</p>
-    <button>Bắt đầu ngay</button>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Giải pháp Công nghệ Hiện Đại</h1>
+        <p>Xây dựng website, ứng dụng và thương hiệu số chuyên nghiệp.</p>
+        <a href="#contact" class="btn">Liên hệ ngay</a>
+    </div>
 </section>
 
-<script src="script.js"></script>
+<section class="section" id="about">
+    <h2 class="section-title">Về Chúng Tôi</h2>
+
+    <p style="text-align:center;max-width:900px;margin:auto;">
+        NamTech cung cấp các giải pháp công nghệ hiện đại,
+        thiết kế website chuyên nghiệp và hỗ trợ chuyển đổi số
+        cho doanh nghiệp.
+    </p>
+</section>
+
+<section class="section" id="services">
+    <h2 class="section-title">Dịch Vụ</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Thiết Kế Website</h3>
+            <p>Website hiện đại, chuẩn SEO và tối ưu tốc độ.</p>
+        </div>
+
+        <div class="card">
+            <h3>Phát Triển Ứng Dụng</h3>
+            <p>Xây dựng phần mềm theo yêu cầu.</p>
+        </div>
+
+        <div class="card">
+            <h3>Tư Vấn Công Nghệ</h3>
+            <p>Giải pháp chuyển đổi số cho doanh nghiệp.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2 class="section-title">Liên Hệ</h2>
+
+    <div class="contact">
+        <input type="text" placeholder="Họ và tên">
+        <input type="email" placeholder="Email">
+        <textarea rows="5" placeholder="Nội dung"></textarea>
+        <button>Gửi</button>
+    </div>
+</section>
+
+<footer>
+    © 2026 NamTech Solutions. All Rights Reserved.
+</footer>
 
 </body>
 </html>
